@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+$colorBG: #c9ccd1;
+$blue: #1877f2;
+$colorNavLinkGray: #65676b;
+$colorBorderGray: #e5e5e5;
+$colorDark: #050505;
+$colorRed: #ef2848;
+$colorGreen: #44bd62;
+$colorViolet:#9d6dfc; 
+
 
 
 body {
@@ -8,7 +17,142 @@ body {
 
 @media (max-width: 319px){}
 
-@media (min-width: 320px) {}
+@media (min-width: 320px) {
+    body {
+        background-color: $colorBG;
+    }
+
+    .headerNav__mobile {
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        line-height: 50px;
+        // border: 1px solid $colorBorderGray;
+        width: 100vw;
+        background-color: #fff;
+        
+        & > ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .headerNav__link {
+        font-size: 1.4rem;
+        color: $colorNavLinkGray;
+        // outline: 1px solid red;
+        padding: 1rem;
+    }
+
+    .headerNav__link:hover {
+        color: $blue;
+        border-top: 3px solid $blue;
+    }
+
+    header {
+        height: 70px;
+        // outline: 1px dashed $blue;
+        display: flex;
+        justify-content: space-between;
+        // padding: 0 20px;
+        background-color: #fff;
+        align-items: center;
+
+        img {
+            // outline: 1px dashed red;
+            width: 40%;
+            height: 40%;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            & > li {
+                // outline: 1px dashed red;
+                margin: 0 6px;
+                padding: 8px;
+                background-color: #e4e6eb;
+                border-radius: 50%;
+
+
+                & > a {
+                    color: $colorDark;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .add-post {
+        .saySomething {
+            display: flex;
+            background-color: #fff;
+            // outline: 1px dashed red;
+            
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-left: 15px;
+            }
+    
+            input {
+                margin-left: 6px;
+                border: none;
+                outline: none;
+                font-size: .9rem;
+                color: $colorDark;
+            }
+    
+            input::placeholder {
+                color: $colorDark;
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            border: 1px solid $colorBorderGray;
+            
+            & > li {
+                // outline: 1px dotted red;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: #fff;
+                border-right: 1px solid $colorBorderGray;
+
+                :last-child {
+                    border: none;
+                }
+
+                & > a {
+                    color: $colorDark;
+                    & > span {
+                        margin-right: 5px;
+                    }
+
+                    .fa-video {
+                        color: $colorRed;
+                    }
+
+                    .fa-images{
+                        color: $colorGreen;
+                    }
+                    .fa-camera-retro{
+                        color: $colorViolet;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap
