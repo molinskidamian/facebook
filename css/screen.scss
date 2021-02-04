@@ -151,7 +151,79 @@ body {
         }
     }
 
+    .rooms {
+        // display: grid;
+        // grid-template-columns: 12;
+        // grid-template-rows: 2;
+        // outline: 1px dashed red;
+        margin: 10px 0;
+    }
+
+    .rooms__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #fff;
+
+        p {
+            color: $colorNavLinkGray;
+        }
+    }
+
+    .rooms__title {
+        font-size: 1rem;
+        font-weight: 600;
+        span {
+            font-weight: 400;
+            font-size: .8rem;
+            padding-left: .6rem;
+            color: $colorNavLinkGray;
+        }
+    }
+
+    .rooms__contant {
+        background-color: #fff;
+        padding: 15px 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .btn-create {
+            font-size: .9rem;
+            background-color: rgba($color: $blue, $alpha: .2);
+            color: $blue;
+            text-decoration: none;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 15px;
+            border-radius: 20px;
+            // outline: 1px solid red;
+
+
+            span {
+                padding-right: 10px;
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            
+
+            li {
+                // outline: 1px dashed red;
+                margin: 0 4px;
+                a:link, a:visited {
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
     
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 /* Extra small devices (portrait phones, less than 576px)
