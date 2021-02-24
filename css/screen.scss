@@ -6,7 +6,7 @@ $colorBorderGray: #e5e5e5;
 $colorDark: #050505;
 $colorRed: #ef2848;
 $colorGreen: #44bd62;
-$colorViolet:#9d6dfc; 
+$colorViolet:#9d6dfc;
 
 
 
@@ -52,10 +52,8 @@ body {
 
     header {
         height: 70px;
-        // outline: 1px dashed $blue;
         display: flex;
         justify-content: space-between;
-        // padding: 0 20px;
         background-color: #fff;
         align-items: center;
 
@@ -157,7 +155,79 @@ body {
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap
 Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    .headerNav__mobile {
+        display: none;
+    }
+
+    header.headerNav__mobile-top {
+        display: none;
+    } 
+
+    header {
+        outline: 1px dashed red;
+        height: 56px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+
+        .header-left {
+            // outline: 1px dashed green;
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+
+        .header-center {
+            outline: 1px dashed red;
+        }
+
+        .header-right {
+            outline: 1px dashed blue;
+        }
+
+        .header-top__form {
+            // outline: 1px dashed orange;
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+
+            .header-top__search__button {
+                background-color: #f0f2f5;
+                border: none;
+                outline: none;
+                height: 40px;
+                border-radius: 50% 0 0 50%;
+                padding: .75rem;
+                 span {
+                     font-size: 1.2rem;
+                     color: #65676b;
+                 }
+            }
+
+            .header-top__search__input {
+                width: 250px;
+                height: 40px;
+                border: none;
+                background-color: #f0f0f5;
+                outline: none;
+                border-radius: 0 20px 20px 0;
+                
+            }
+
+            .header-top__search__input::placeholder {
+                font-size: .9rem;
+                font-size: 300;
+                color: #65676b;
+            }
+        }
+        
+        .header-top-logo {
+            height: 44px;
+            width: 44px;
+        }
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {}

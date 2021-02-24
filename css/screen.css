@@ -145,6 +145,94 @@ body {
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap
 Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .headerNav__mobile {
+    display: none;
+  }
+  header.headerNav__mobile-top {
+    display: none;
+  }
+  header {
+    outline: 1px dashed red;
+    height: 56px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .header-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 1rem;
+  }
+  header .header-center {
+    outline: 1px dashed red;
+  }
+  header .header-right {
+    outline: 1px dashed blue;
+  }
+  header .header-top__form {
+    margin-left: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header-top__form .header-top__search__button {
+    background-color: #f0f2f5;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 50% 0 0 50%;
+    padding: .75rem;
+  }
+  header .header-top__form .header-top__search__button span {
+    font-size: 1.2rem;
+    color: #65676b;
+  }
+  header .header-top__form .header-top__search__input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    background-color: #f0f0f5;
+    outline: none;
+    border-radius: 0 20px 20px 0;
+  }
+  header .header-top__form .header-top__search__input::-webkit-input-placeholder {
+    font-size: .9rem;
+    font-size: 300;
+    color: #65676b;
+  }
+  header .header-top__form .header-top__search__input:-ms-input-placeholder {
+    font-size: .9rem;
+    font-size: 300;
+    color: #65676b;
+  }
+  header .header-top__form .header-top__search__input::-ms-input-placeholder {
+    font-size: .9rem;
+    font-size: 300;
+    color: #65676b;
+  }
+  header .header-top__form .header-top__search__input::placeholder {
+    font-size: .9rem;
+    font-size: 300;
+    color: #65676b;
+  }
+  header .header-top-logo {
+    height: 44px;
+    width: 44px;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 /* Large devices (desktops, 992px and up) */
 /* Extra large devices (large desktops, 1200px and up) */
