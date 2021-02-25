@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+ul {
+  list-style: none;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #c9ccd1;
@@ -54,7 +58,6 @@ Small devices (landscape phones, 576px and up) */
     -webkit-box-pack: flex;
         -ms-flex-pack: flex;
             justify-content: flex;
-    outline: 1px solid red;
   }
   .header-top__center {
     -ms-grid-column: 3;
@@ -77,9 +80,6 @@ Small devices (landscape phones, 576px and up) */
     height: 50px;
     margin: 0 1rem;
   }
-  .header-top__form {
-    outline: 1px dashed orange;
-  }
   .left-side {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -87,7 +87,6 @@ Small devices (landscape phones, 576px and up) */
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 /3;
-    outline: 1px dashed green;
   }
   .content {
     -ms-grid-column: 4;
@@ -96,7 +95,6 @@ Small devices (landscape phones, 576px and up) */
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 /3;
-    outline: 1px dashed orange;
   }
   .right-side {
     -ms-grid-column: 9;
@@ -105,7 +103,37 @@ Small devices (landscape phones, 576px and up) */
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 /3;
-    outline: 1px dashed red;
+  }
+  .header-top__center__menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    height: 100%;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-top__center__menu__item {
+    width: 100%;
+    height: 100%;
+  }
+  .header-top__center__menu__item:hover {
+    border-bottom: 2px solid #1877f2;
+  }
+  .header-top__center__menu__link {
+    line-height: 56px;
+    text-align: center;
+    display: block;
+    color: #65676b;
+    font-size: 1.2rem;
+  }
+  .header-top__center__menu__link:hover {
+    height: 54px;
+    color: #1877f2;
   }
 }
 
