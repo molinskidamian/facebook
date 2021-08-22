@@ -4,6 +4,7 @@ body {
   font-family: "Catamaran", sans-serif;
   font-size: 16px;
   background-color: #c8ccd2;
+  color: #050505;
 }
 
 @media (max-width: 750px) {
@@ -63,6 +64,7 @@ body {
   section.say-something {
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 14px;
   }
   section.say-something .up {
     padding: 1.5rem 0.5rem;
@@ -75,9 +77,71 @@ body {
   }
   section.say-something .up form {
     padding-left: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
   }
   section.say-something .up form input {
     border: none;
+    width: 100%;
+    padding: 0.5rem;
+    color: black;
+    outline: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+  }
+  section.say-something .up form input::-webkit-input-placeholder {
+    color: black;
+    letter-spacing: 0.02rem;
+  }
+  section.say-something .up form input:-ms-input-placeholder {
+    color: black;
+    letter-spacing: 0.02rem;
+  }
+  section.say-something .up form input::-ms-input-placeholder {
+    color: black;
+    letter-spacing: 0.02rem;
+  }
+  section.say-something .up form input::placeholder {
+    color: black;
+    letter-spacing: 0.02rem;
+  }
+  section.say-something .down .say-something--menu {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section.say-something .down .say-something--menu li:first-child > a > i {
+    color: #f1284a;
+  }
+  section.say-something .down .say-something--menu li:nth-child(2) > a > i {
+    color: #44bd62;
+  }
+  section.say-something .down .say-something--menu li:nth-child(3) > a > i {
+    color: #9d6dfc;
+  }
+  section.say-something .down .say-something--item {
+    border-left: 1px solid #e5e5e5;
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  section.say-something .down .say-something--link {
+    text-decoration: none;
+    color: #050505;
+    font-weight: 600;
+  }
+  section.say-something .down .say-something--link > i {
+    margin-right: 0.5rem;
+  }
+  section.rooms {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 14px;
   }
 }
 /*# sourceMappingURL=screen.css.map */
