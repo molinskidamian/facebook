@@ -7,8 +7,12 @@ body {
 }
 
 @media (max-width: 750px) {
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+  }
   header.mobile-main-header {
-    border: 1px solid red;
     background-color: #fefeff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -22,10 +26,10 @@ body {
     border-bottom: 1px solid #e5e5e5;
     padding: 0.5rem;
   }
-  .mobile-main--logo {
+  header.mobile-main-header .mobile-main--logo {
     width: 200px;
   }
-  .mobile-main-header--menu {
+  header.mobile-main-header .mobile-main-header--menu {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -37,7 +41,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .mobile-main-header--item {
+  header.mobile-main-header .mobile-main-header--item {
     height: 36px;
     width: 36px;
     display: -webkit-box;
@@ -53,8 +57,27 @@ body {
     border-radius: 36px;
     margin-left: 0.5rem;
   }
-  .mobile-main-header--link {
+  header.mobile-main-header .mobile-main-header--link {
     font-size: 100px;
+  }
+  section.say-something {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  section.say-something .up {
+    padding: 1.5rem 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.say-something .up form {
+    padding-left: 0.5rem;
+  }
+  section.say-something .up form input {
+    border: none;
   }
 }
 /*# sourceMappingURL=screen.css.map */

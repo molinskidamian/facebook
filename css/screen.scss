@@ -3,6 +3,8 @@
 
 $colorBorder: rgba(229, 229, 229, 1);
 $colorBgMain: rgba(200, 204, 210, 1);
+
+$avatarSize: 3rem;
 body {
     font-family: "Catamaran", sans-serif;
     font-size: 16px;
@@ -10,54 +12,79 @@ body {
 }
 
 @media (max-width: 750px) {
+    .avatar {
+        width: $avatarSize;
+        height: $avatarSize;
+        border-radius: $avatarSize;
+    }
+
     header.mobile-main-header {
-        border: 1px solid red;
+        // border: 1px solid red;
         background-color: rgba(254, 254, 255, 1);
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid $colorBorder;
         padding: 0.5rem;
+
+        .mobile-main--logo {
+            width: 200px;
+        }
+
+        .mobile-main-header--menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-main-header--item {
+            height: 36px;
+            width: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(228, 230, 235, 1);
+            border-radius: 36px;
+            margin-left: 0.5rem;
+
+            // outline: 1px dashed red;
+        }
+
+        .mobile-main-header--link {
+            font-size: 100px;
+        }
+
+        // tests
+        div.mobile-main-header--left {
+            // outline: 1px dashed red;
+        }
+        div.mobile-main-header--left {
+            // outline: 1px dashed red;
+        }
+
+        .mobile-main-header--menu {
+            // outline: 1px dashed orange;
+        }
     }
 
-    .mobile-main--logo {
-        width: 200px;
-    }
+    section.say-something {
+        // outline: 1px solid red;
+        background-color: #fff;
+        border-bottom: 1px solid $colorBorder;
 
-    .mobile-main-header--menu {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .up {
+            padding: 1.5rem 0.5rem;
+            display: flex;
+            align-items: center;
 
-    .mobile-main-header--item {
-        height: 36px;
-        width: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(228, 230, 235, 1);
-        border-radius: 36px;
-        margin-left: 0.5rem;
-
-        // outline: 1px dashed red;
-    }
-
-    .mobile-main-header--link {
-        font-size: 100px;
-    }
-
-    // tests
-    div.mobile-main-header--left {
-        // outline: 1px dashed red;
-    }
-    div.mobile-main-header--left {
-        // outline: 1px dashed red;
-    }
-
-    .mobile-main-header--menu {
-        // outline: 1px dashed orange;
+            form {
+                padding-left: 0.5rem;
+                input {
+                    border: none;
+                }
+            }
+        }
     }
 }
 
