@@ -127,6 +127,7 @@ body {
   section.say-something .down .say-something--item {
     border-left: 1px solid #e5e5e5;
     margin: 0.5rem 0;
+    padding: 0.5rem 0;
     width: 100%;
     text-align: center;
   }
@@ -138,10 +139,36 @@ body {
   section.say-something .down .say-something--link > i {
     margin-right: 0.5rem;
   }
+  section.say-something .down .say-something--link:hover {
+    text-decoration: underline;
+  }
   section.rooms {
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 14px;
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.rooms .rooms--menu {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.rooms .rooms--item {
+    height: 388px;
+    width: 217px;
+    border: 1px solid #e5e5e5;
+    margin-left: 0.75rem;
+    border-radius: 1rem;
+  }
+  section.rooms .rooms--item:first-child {
+    margin-left: 1.25rem;
   }
 }
 /*# sourceMappingURL=screen.css.map */
