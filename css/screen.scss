@@ -8,6 +8,9 @@ $colorGreen: rgba(68, 189, 98, 1);
 $colorViolet: rgba(157, 109, 252, 1);
 $colorBlack: rgba(5, 5, 5, 1);
 $colorFontBlue: #4178f2;
+$colorFontHeader: #5f6771;
+
+$headerHeight: 56px;
 
 $avatarSize: 3rem;
 body {
@@ -171,49 +174,87 @@ body {
     }
 
     .main-header {
-        height: 56px;
+        height: $headerHeight;
         background-color: #fff;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 1rem;
+        position: relative;
 
         &--left {
             display: flex;
             align-items: center;
+            // outline: 1px dashed red;
+            height: 100%;
+
+            .main-logo {
+                height: 40px;
+                border-radius: 50%;
+                // outline: 1px orange dashed;
+                margin-right: 1rem;
+            }
+
+            a.form-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // outline: 1px dashed red;
+                width: 40px;
+                height: 40px;
+                text-decoration: none;
+                color: $colorFontHeader;
+            }
+
+            .fa-search {
+                background-color: #f0f2f5;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 25px;
+            }
 
             form {
-                margin-left: 1rem;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
+                align-items: center;
+                outline: 2px dashed orange;
+                background-color: #fff;
+                min-height: $headerHeight;
+                // display: none;    /*     <--------- close search form */
 
-                input,
-                button {
+                input {
+                    flex-shrink: 1;
+                    height: 40px;
+                    width: 250px;
+                    // margin: 0;
+                    border-radius: 25px;
                     background-color: #f0f2f5;
                     color: #5f6771;
                     outline: none;
                     border: none;
+                    padding-left: 1rem;
+                    line-height: $headerHeight;
+                    margin-left: 0.5rem;
                 }
 
-                input {
-                    // width: 250px;
-                    flex-shrink: 1;
+                .fa-arrow-left {
+                    display: bloc;
+                    z-index: 1000;
                     height: 40px;
-                    margin: 0;
-                    border-radius: 0 50% 50% 0;
-                }
-
-                button {
-                    margin: 0;
                     width: 40px;
-                    height: 40px;
-                    border-radius: 50% 0 0 50%;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 25px;
+
+                    &:hover {
+                        background-color: #f0f2f5;
+                    }
                 }
             }
-        }
-
-        .main-logo {
-            height: 40px;
-            border-radius: 50%;
         }
 
         .main-menu {
@@ -284,6 +325,23 @@ body {
                             padding: 0;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1245px) {
+    // Pełny formularz wyszukiwania w headerze
+    .main-header {
+        &--left {
+            form {
+                .fa-search {
+                    border-radius: 25px 0 0 25px;
+                }
+
+                input {
+                    display: block;
                 }
             }
         }
