@@ -3,7 +3,7 @@
 body {
   font-family: "Catamaran", sans-serif;
   font-size: 16px;
-  background-color: #c8ccd2;
+  background-color: #f0f2f5;
   color: #050505;
 }
 
@@ -222,8 +222,16 @@ body {
   }
   .main-header .main-menu li {
     height: 100%;
-    padding: 0 3rem;
+    width: 7.8rem;
     font-size: 1.5rem;
+    text-align: center;
+  }
+  .main-header .main-menu li .active {
+    color: #4178f2;
+    border-bottom: 2px solid #4178f2;
+    display: block;
+    width: 100%;
+    height: calc(100% - 2px);
   }
   .main-header .main-menu li a {
     color: #606266;
@@ -232,6 +240,8 @@ body {
   .main-header .main-menu li:hover {
     background-color: #f2f2f2;
     border-radius: 15%;
+    height: 90%;
+    margin: auto;
   }
   .main-header--right ul {
     display: -webkit-box;
